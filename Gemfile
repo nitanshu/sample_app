@@ -19,7 +19,9 @@ gem 'jquery-rails'
 group :test do
 gem 'factory_girl_rails'
 gem 'capybara', '1.1.2'
+gem 'cucumber-rails', require: false
+gem 'database_cleaner'
 end
 group :production do
-gem 'pg', '0.12.2'
+gem 'pg'
 end
