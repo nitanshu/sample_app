@@ -1,4 +1,5 @@
 @import "bootstrap";
+
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
 @mixin box_sizing {
@@ -6,6 +7,7 @@ $grayMediumLight: #eaeaea;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
+
 /* universal */
 html {
 overflow-y: scroll;
@@ -25,6 +27,7 @@ h1 {
 margin-bottom: 10px;
 }
 }
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
 line-height: 1;
@@ -47,22 +50,23 @@ p {
 font-size: 1.1em;
 line-height: 1.7em;
 }
+
 /* header */
 #logo {
 float: left;
 margin-right: 10px;
 font-size: 1.7em;
 color: black;
-text-transform: uppercase;
 letter-spacing: -1px;
 padding-top: 9px;
 font-weight: bold;
 line-height: 1;
 &:hover {
-color: green;
+color: blue;
 text-decoration: none;
 }
 }
+
 /* footer */
 footer {
 margin-top: 45px;
@@ -87,6 +91,7 @@ margin-left: 10px;
 }
 }
 }
+
 /* miscellaneous */
 .debug_dump {
 clear: both;
@@ -95,6 +100,7 @@ width: 100%;
 margin-top: 45px;
 @include box_sizing;
 }
+
 /* sidebar */
 aside {
 section {
@@ -121,6 +127,7 @@ margin-bottom: 3px;
 float: left;
 margin-right: 10px;
 }
+
 /* forms */
 input, textarea, select, .uneditable-input {
 border: 1px solid #bbb;
@@ -130,6 +137,7 @@ height: auto;
 margin-bottom: 15px;
 @include box_sizing;
 }
+
 /* forms */
 #error_explanation {
 color: #f00;
@@ -141,4 +149,18 @@ margin: 0 0 18px 0;
 .field_with_errors {
 @extend .control-group;
 @extend .error;
+}
+ 
+ /* users index */
+.users {
+list-style: none;
+margin: 0;
+li {
+overflow: auto;
+padding: 10px 0;
+border-top: 1px solid $grayLighter;
+&:last-child {
+border-bottom: 1px solid $grayLighter;
+}
+}
 }
