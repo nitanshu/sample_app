@@ -12,7 +12,7 @@ def create
 @user = User.new(params[:user])
 if @user.save
   sign_in @user
-  flash[:success] ="Welcome to the TweetBook!!!"
+  flash[:success] ="Welcome to the TweetIn!!!"
   redirect_to @user 
 # Handle a successful save.
 else
@@ -29,6 +29,7 @@ end
 
 def show
   @user = User.find(params[:id])
+  @microposts = @user.microposts.paginate(page: params[:page])
 end
 
 def update
