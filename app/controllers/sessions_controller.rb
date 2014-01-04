@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+	before_filter :checkguest, only: :new
 def new
 end
 def create
