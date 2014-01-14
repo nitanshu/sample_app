@@ -1,10 +1,13 @@
 SampleApp::Application.routes.draw do
+  get "password_resets/new"
+
   resources :users do
     member do
      get :following, :followers
     end
 end
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions
+  resources :password_resets
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   

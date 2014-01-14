@@ -1,0 +1,11 @@
+<%= form_tag password_resets_path, :method => :post do %>
+<div class="row">
+<div class="span6 offset3">
+<%= form_for(@user) do |f| %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+<%= f.submit "Reset Password", class: "btn btn-large btn-primary" %>
+<% end %>
+</div>
+</div>
+<% end %>
