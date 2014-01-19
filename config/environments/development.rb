@@ -14,10 +14,7 @@ SampleApp::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
-
-  #for sending mail to user mail_id
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -37,4 +34,13 @@ SampleApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+ # don't serve precompiled static assets in dev mode because they will be loaded twice
+  config.serve_static_assets = false
+
+  # for devise password reset, etc
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
+
+
