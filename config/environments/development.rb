@@ -40,19 +40,7 @@ SampleApp::Application.configure do
 
   # for devise password reset, etc
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.perform_deliveries = true 
-
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "herokuapp.com",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "nitanshu1991@gmail.com", # this should be a real gmail id
-    password: "nit@nshu" # this should be real password of your gmail id
-  }
+  
 end
 
 
