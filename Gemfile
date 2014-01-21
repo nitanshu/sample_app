@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.5'
-gem 'pg'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker'

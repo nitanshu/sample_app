@@ -83,7 +83,7 @@ SampleApp::Application.configure do
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["nitanshu1991@gmail.com"],
-  password: ENV["nit@nshu]
+  password: ENV["nit@nshu"]
 }
 
   # Make Heroku happy
